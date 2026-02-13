@@ -3,7 +3,7 @@ import pytesseract
 from PIL import Image
 
 # Configuration for Windows
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 def get_text_from_file(uploaded_file):
     try:
@@ -14,4 +14,5 @@ def get_text_from_file(uploaded_file):
             img = Image.open(uploaded_file)
             return pytesseract.image_to_string(img)
     except Exception as e:
+
         return f"OCR Error: {str(e)}"
