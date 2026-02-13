@@ -32,7 +32,7 @@ st.title("AutoSLA: LLM-Based Car Contract Analysis System")
 st.markdown("Upload your car lease or loan agreement to verify details against official records.")
 
 with st.sidebar:
-    st.header("Uploading Portal")
+    st.header("Upload Portal")
     uploaded_file = st.file_uploader("Upload Contract (PDF or Image)", type=["pdf", "png", "jpg", "jpeg"])
 
 if uploaded_file:
@@ -159,3 +159,4 @@ if st.session_state.analysis_results:
 elif not uploaded_file:
 
     st.info("👋 Welcome! Please upload a contract in the sidebar to begin.")
+
